@@ -1,0 +1,14 @@
+{
+  "name": "host",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "run_list": [
+    "recipe[gentoo-support]",
+    "recipe[ssh-key]",
+    "recipe[screen]",
+    "recipe[htop]",
+    "recipe[vim]",
+    "recipe[iotop]",
+    "recipe[ethtool]"
+  ]
+}

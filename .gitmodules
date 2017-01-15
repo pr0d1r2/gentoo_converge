@@ -1,0 +1,6 @@
+[submodule "nodes"]
+	path = nodes
+	url = git@gitlab.com:pr0d1r2/gentoo_converge-nodes.git
+[submodule "cookbooks/ssh-key/files/default"]
+	path = cookbooks/ssh-key/files/default
+	url = git@gitlab.com:pr0d1r2/ssh_public_keys.git
