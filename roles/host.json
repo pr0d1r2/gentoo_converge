@@ -9,6 +9,7 @@
     "recipe[htop]",
     "recipe[vim]",
     "recipe[iotop]",
+    "recipe[parallel]",
     "recipe[ethtool]"
   ]
 }
