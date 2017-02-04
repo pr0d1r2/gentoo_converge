@@ -1,0 +1,29 @@
+DEPENDENCIES
+  gentoo
+    git: https://github.com/aostanin/chef-gentoo
+    revision: 81b48aa88f51c8612afc6b027305c0ca057a5c18
+    ref: 81b48aa
+  gentoo_package_masking
+    git: https://github.com/pr0d1r2/gentoo_package_masking.git
+    revision: f3e6653ec35064c870b915c9863c0b5858265dea
+  htop
+  zfs_pools
+    git: https://github.com/pr0d1r2/chef-zfs_pools.git
+    revision: 25c709183af6de6310bc2f506dcc05f54300c89c
+
+GRAPH
+  compat_resource (12.16.3)
+  gentoo (0.1.0)
+  gentoo_package_masking (1.0.0)
+    gentoo (>= 0.0.0)
+  htop (2.0.0)
+    yum-repoforge (>= 0.0.0)
+  yum-epel (2.1.1)
+    compat_resource (>= 12.16.3)
+  yum-repoforge (2.0.1)
+    compat_resource (>= 12.16.3)
+    yum-epel (>= 0.0.0)
+  zfs (0.0.6)
+  zfs_pools (1.0.0)
+    gentoo (>= 0.0.0)
+    zfs (>= 0.0.0)
