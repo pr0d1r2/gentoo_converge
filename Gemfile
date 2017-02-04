@@ -1,4 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'knife-solo'
+# gem 'knife-solo', github: 'matschaffer/knife-solo'
+gem 'knife-solo', path: '/Users/pr0d1r2/projects/knife-solo'
 gem 'berkshelf'
+gem 'net-ssh', '4.0.1'
+gem 'chef', '12.19.7', github: 'chef/chef'
+gem 'rbnacl'
+gem 'rbnacl-libsodium'
+gem 'bcrypt_pbkdf'
