@@ -1,8 +1,8 @@
-node_name "local"
+node_name "host"
 
 base = File.expand_path('..', __FILE__)
 
-nodes_path                File.join(base, 'nodes')
+nodes_path                File.join(base, 'nodes-local')
 role_path                 File.join(base, 'roles')
 data_bag_path             File.join(base, 'data_bags')
 encrypted_data_bag_secret File.join(base, 'data_bag_key')
