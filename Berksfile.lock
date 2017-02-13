@@ -8,7 +8,7 @@ DEPENDENCIES
     revision: 25292504b6b8eee3ead6acae876c96dd7b0467e8
   gentoo_package_masking
     git: https://github.com/pr0d1r2/gentoo_package_masking.git
-    revision: f09dc624b9492b0a84b9da39597f03c2bc125027
+    revision: 6b95704e5af645a9a4e46f06fdd8063549952574
   htop
   zfs
     git: https://github.com/pr0d1r2/chef-zfs-gentoo.git
