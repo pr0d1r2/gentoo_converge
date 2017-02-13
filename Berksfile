@@ -2,6 +2,8 @@ source 'https://supermarket.chef.io'
 
 cookbook 'gentoo', git: 'https://github.com/aostanin/chef-gentoo', ref: '81b48aa88f51c8612afc6b027305c0ca057a5c18'
 cookbook 'gentoo_package_masking', github: 'pr0d1r2/gentoo_package_masking'
+cookbook 'gentoo_kernel', github: 'pr0d1r2/chef-gentoo_kernel'
+cookbook 'zfs', github: 'pr0d1r2/chef-zfs-gentoo'
 cookbook 'zfs_pools', github: 'pr0d1r2/chef-zfs_pools'
 cookbook 'htop'
 

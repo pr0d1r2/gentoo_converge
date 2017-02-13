@@ -1,6 +1,0 @@
-name 'zfs'
-version '1.0.0'
-depends 'gentoo'
-depends 'spl'
-depends 'zfs-kmod'
-provides 'zfs'
