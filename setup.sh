@@ -48,6 +48,10 @@ fi
 
 run touch /etc/portage/package.keywords/default || exit $?
 
+if [ -f ~/.ssh/id_rsa_$ADDRESS ]; then
+  ssh-add ~/.ssh/id_rsa_$ADDRESS
+fi
+
 berks vendor || exit $?
 knife solo cook root@$ADDRESS || exit  $?
 
