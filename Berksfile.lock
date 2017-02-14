@@ -10,6 +10,7 @@ DEPENDENCIES
     git: https://github.com/pr0d1r2/gentoo_package_masking.git
     revision: 6b95704e5af645a9a4e46f06fdd8063549952574
   htop
+  nginx
   zfs
     git: https://github.com/pr0d1r2/chef-zfs-gentoo.git
     revision: 96eaea13fe63c06b48d37f30c43bfaba1a958831
@@ -18,6 +19,10 @@ DEPENDENCIES
     revision: e473df92dfa1adfeefc5174746c68c8eed9aa979
 
 GRAPH
+  apt (2.9.2)
+  bluepill (2.4.3)
+    rsyslog (>= 2.0)
+  build-essential (1.4.4)
   compat_resource (12.16.3)
   gentoo (0.1.0)
   gentoo_kernel (1.0.0)
@@ -25,6 +30,22 @@ GRAPH
     gentoo (>= 0.0.0)
   htop (2.0.0)
     yum-repoforge (>= 0.0.0)
+  nginx (2.4.2)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 1.4)
+    ohai (~> 1.1)
+    runit (~> 1.2)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  ohai (1.1.12)
+  packagecloud (0.2.5)
+  rsyslog (5.1.0)
+    compat_resource (>= 12.14.6)
+  runit (1.8.0)
+    packagecloud (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  yum (3.13.0)
   yum-epel (2.1.1)
     compat_resource (>= 12.16.3)
   yum-repoforge (2.0.1)
