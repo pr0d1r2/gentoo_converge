@@ -2,6 +2,7 @@
 
 ADDRESS=$1
 SSH="root@$ADDRESS"
+TODAY=`date +%Y%m%d`
 
 function run() {
   ssh $SSH $@ || return $?
@@ -9,47 +10,40 @@ function run() {
 
 cd `dirname $0`
 
-if [ ! -e nodes/$ADDRESS.layman-installed ]; then
-  run which layman
-  if [ $? -gt 0 ]; then
-    run emerge layman || exit $?
-  fi
-  touch nodes/$ADDRESS.layman-installed
+run which layman &>/dev/null
+if [ $? -gt 0 ]; then
+  run emerge layman || exit $?
 fi
 
-if [ ! -e nodes/$ADDRESS.layman-synced ]; then
+run test -f /tmp/.layman-synced-$TODAY
+if [ $? -gt 0 ]; then
   run layman -s ALL || exit $?
-  touch nodes/$ADDRESS.layman-synced
+  run touch /tmp/.layman-synced-$TODAY
 fi
 
-if [ ! -e nodes/$ADDRESS.layman-add-ssnb ]; then
-  run test -d /var/lib/layman/ssnb
-  if [ $? -gt 0 ]; then
-    run layman -a ssnb || exit $?
-  fi
-  touch nodes/$ADDRESS.layman-add-ssnb
+run test -d /var/lib/layman/ssnb
+if [ $? -gt 0 ]; then
+  run layman -a ssnb || exit $?
 fi
 
-if [ ! -e nodes/$ADDRESS.layman-sourced ]; then
-  run grep -q /var/lib/layman/make.conf /etc/portage/make.conf
-  if [ $? -gt 0 ]; then
-    run 'echo "source /var/lib/layman/make.conf" >> /etc/portage/make.conf' || exit $?
-  fi
-  touch nodes/$ADDRESS.layman-sourced
+run grep -q /var/lib/layman/make.conf /etc/portage/make.conf
+if [ $? -gt 0 ]; then
+  run 'echo "source /var/lib/layman/make.conf" >> /etc/portage/make.conf' || exit $?
 fi
 
-if [ ! -e nodes/$ADDRESS.chefdk-omnibus-keywords ]; then
+run test -d /etc/portage/package.keywords
+if [ $? -gt 0 ]; then
   run mkdir /etc/portage/package.keywords
-  run 'echo "app-admin/chefdk-omnibus ~amd64" > /etc/portage/package.keywords/chefdk-omnibus'
-  touch nodes/$ADDRESS.chefdk-omnibus-keywords
 fi
 
-if [ ! -e nodes/$ADDRESS.chefdk-omnibus-installed ]; then
-  run which chef-solo
-  if [ $? -gt 0 ]; then
-    run emerge chefdk-omnibus || exit $?
-    touch nodes/$ADDRESS.chefdk-omnibus-installed
-  fi
+run test -f /etc/portage/package.keywords/chefdk-omnibus
+if [ $? -gt 0 ]; then
+  run 'echo "app-admin/chefdk-omnibus ~amd64" > /etc/portage/package.keywords/chefdk-omnibus'
+fi
+
+run which chef-solo &>/dev/null
+if [ $? -gt 0 ]; then
+  run emerge chefdk-omnibus || exit $?
 fi
 
 run touch /etc/portage/package.keywords/default || exit $?
