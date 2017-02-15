@@ -3,6 +3,8 @@
   "json_class": "Chef::Role",
   "chef_type": "role",
   "run_list": [
+    "recipe[openssl]",
+    "recipe[openssh]",
     "recipe[gentoo-support]",
     "recipe[ssh-key]",
     "recipe[screen]",
