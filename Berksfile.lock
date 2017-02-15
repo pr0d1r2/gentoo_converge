@@ -11,6 +11,7 @@ DEPENDENCIES
     revision: 6b95704e5af645a9a4e46f06fdd8063549952574
   htop
   nginx
+  traceroute
   zfs
     git: https://github.com/pr0d1r2/chef-zfs-gentoo.git
     revision: 96eaea13fe63c06b48d37f30c43bfaba1a958831
@@ -45,6 +46,7 @@ GRAPH
   runit (1.8.0)
     packagecloud (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  traceroute (1.0.0)
   yum (3.13.0)
   yum-epel (2.1.1)
     compat_resource (>= 12.16.3)

@@ -12,6 +12,8 @@
     "recipe[vim]",
     "recipe[iotop]",
     "recipe[parallel]",
+    "recipe[traceroute]",
+    "recipe[mtr]",
     "recipe[ethtool]"
   ]
 }
