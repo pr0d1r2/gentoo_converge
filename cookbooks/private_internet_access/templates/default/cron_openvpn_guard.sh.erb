@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ `rc-status | grep openvpn | grep started | wc -l` -eq 0 ]; then
+  <%= @command %>
+fi
+
+sleep 10
+
+ping -c 5 -W 3 8.8.8.8
+if [ $? -gt 0 ]; then
+  <%= @command %>
+fi

@@ -1,0 +1,10 @@
+{
+  "name": "media_downloader",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "run_list": [
+    "recipe[aria2]",
+    "recipe[private_internet_access]",
+    "recipe[pynapi_tor]"
+  ]
+}

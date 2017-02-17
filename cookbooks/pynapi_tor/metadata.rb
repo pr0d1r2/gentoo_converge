@@ -1,0 +1,6 @@
+name 'pynapi_tor'
+version '1.0.0'
+depends 'tor'
+depends 'pynapi'
+depends 'torsocks'
+provides 'pynapi_tor'

@@ -5,10 +5,10 @@ DEPENDENCIES
     ref: 81b48aa
   gentoo_kernel
     git: https://github.com/pr0d1r2/chef-gentoo_kernel.git
-    revision: 25292504b6b8eee3ead6acae876c96dd7b0467e8
+    revision: 04a74e9b7b04416a9ad5d1527b31912ee232f332
   gentoo_package_masking
     git: https://github.com/pr0d1r2/gentoo_package_masking.git
-    revision: 6b95704e5af645a9a4e46f06fdd8063549952574
+    revision: 5fa94405adaa2a7abc33ca178ba2370325f38c95
   htop
   nginx
   traceroute
@@ -20,10 +20,13 @@ DEPENDENCIES
     revision: 561266dcf132aaf326de433fec5fadab0706e0b2
 
 GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
   apt (2.9.2)
   bluepill (2.4.3)
     rsyslog (>= 2.0)
-  build-essential (1.4.4)
+  build-essential (2.4.0)
+    7-zip (>= 0.0.0)
   compat_resource (12.16.3)
   gentoo (0.1.0)
   gentoo_kernel (1.0.0)
@@ -31,15 +34,14 @@ GRAPH
     gentoo (>= 0.0.0)
   htop (2.0.0)
     yum-repoforge (>= 0.0.0)
-  nginx (2.4.2)
+  nginx (2.7.6)
     apt (~> 2.2)
     bluepill (~> 2.3)
-    build-essential (~> 1.4)
-    ohai (~> 1.1)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
     runit (~> 1.2)
-    yum (~> 3.0)
-    yum-epel (>= 0.0.0)
-  ohai (1.1.12)
+    yum-epel (~> 0.3)
+  ohai (2.1.0)
   packagecloud (0.2.5)
   rsyslog (5.1.0)
     compat_resource (>= 12.14.6)
@@ -47,9 +49,10 @@ GRAPH
     packagecloud (>= 0.0.0)
     yum-epel (>= 0.0.0)
   traceroute (1.0.0)
-  yum (3.13.0)
-  yum-epel (2.1.1)
-    compat_resource (>= 12.16.3)
+  windows (2.0.2)
+  yum (5.0.0)
+  yum-epel (0.7.1)
+    yum (>= 3.6.3)
   yum-repoforge (2.0.1)
     compat_resource (>= 12.16.3)
     yum-epel (>= 0.0.0)

@@ -1,0 +1,5 @@
+name 'private_internet_access'
+version '1.0.0'
+depends 'openvpn'
+depends 'crontab'
+provides 'private_internet_access'
