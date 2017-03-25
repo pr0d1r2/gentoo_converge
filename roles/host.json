@@ -9,6 +9,7 @@
     "recipe[gentoo-support]",
     "recipe[ssh-key]",
     "recipe[screen]",
+    "recipe[shell_aliases]",
     "recipe[htop]",
     "recipe[vim]",
     "recipe[iotop]",
