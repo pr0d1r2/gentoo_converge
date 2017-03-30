@@ -17,7 +17,7 @@ DEPENDENCIES
     revision: 96eaea13fe63c06b48d37f30c43bfaba1a958831
   zfs_pools
     git: https://github.com/pr0d1r2/chef-zfs_pools.git
-    revision: 561266dcf132aaf326de433fec5fadab0706e0b2
+    revision: 190fd7b879fdd31d3ca98dbd720dc5edcaa8d526
 
 GRAPH
   7-zip (1.0.2)
