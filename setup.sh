@@ -26,11 +26,6 @@ if [ $? -gt 0 ]; then
   run layman -a ssnb || exit $?
 fi
 
-run grep -q /var/lib/layman/make.conf /etc/portage/make.conf
-if [ $? -gt 0 ]; then
-  run 'echo "source /var/lib/layman/make.conf" >> /etc/portage/make.conf' || exit $?
-fi
-
 run test -d /etc/portage/package.keywords
 if [ $? -gt 0 ]; then
   run mkdir /etc/portage/package.keywords
