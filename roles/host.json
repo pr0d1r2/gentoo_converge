@@ -11,6 +11,7 @@
     "recipe[screen]",
     "recipe[shell_aliases]",
     "recipe[htop]",
+    "recipe[ripgrep]",
     "recipe[vim]",
     "recipe[iotop]",
     "recipe[parallel]",
