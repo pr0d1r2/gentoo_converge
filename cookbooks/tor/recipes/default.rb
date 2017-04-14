@@ -1,3 +1,4 @@
+include_recipe 'gentoo-support::portage_defaults'
 include_recipe 'openssl'
 
 gentoo_package_use 'net-misc/tor' do

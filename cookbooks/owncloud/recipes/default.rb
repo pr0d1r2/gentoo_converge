@@ -1,3 +1,5 @@
+include_recipe 'gentoo-support::portage_defaults'
+
 gentoo_package_keywords 'www-apps/owncloud' do
   keywords '~amd64'
 end
