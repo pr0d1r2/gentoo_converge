@@ -10,6 +10,7 @@
     "recipe[ssh-key]",
     "recipe[screen]",
     "recipe[shell_aliases]",
+    "recipe[ncdu]",
     "recipe[htop]",
     "recipe[ripgrep]",
     "recipe[vim]",
