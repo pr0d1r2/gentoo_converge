@@ -14,6 +14,7 @@
     "recipe[htop]",
     "recipe[ripgrep]",
     "recipe[vim]",
+    "recipe[pwgen]",
     "recipe[iotop]",
     "recipe[parallel]",
     "recipe[traceroute]",
