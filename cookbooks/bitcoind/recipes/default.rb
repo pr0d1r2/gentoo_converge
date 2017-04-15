@@ -14,7 +14,7 @@ template '/etc/bitcoin/bitcoin.conf' do
   variables(node[:bitcoind])
 end
 
-if default[:zfs_pools_require_mountpoints_mounted]
+if node[:zfs_pools_require_mountpoints_mounted]
   # When using zfs_pools usually we put bitcoin data on gzip-9 compressed mountpoint
   # As zfs_pools is one of the first packages and it allow enforce filesystem mounts
   # we support this by starting it (but not enabling as after boot there is no ZFS mount)
