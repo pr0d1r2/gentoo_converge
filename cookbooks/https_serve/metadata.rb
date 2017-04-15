@@ -1,3 +1,8 @@
 name 'https_serve'
 version '1.0.0'
+depends 'nginx'
+depends 'pwgen'
+depends 'openssl'
+depends 'apache-tools'
+depends 'shell_aliases'
 provides 'https_serve'
