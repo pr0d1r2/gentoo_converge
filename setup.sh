@@ -43,8 +43,11 @@ fi
 
 run touch /etc/portage/package.keywords/default || exit $?
 
-if [ -f ~/.ssh/id_rsa_$ADDRESS ]; then
-  ssh-add ~/.ssh/id_rsa_$ADDRESS
+ssh-add -l | grep -q $ADDRESS
+if [ $? -gt 0 ]; then
+  if [ -f ~/.ssh/id_rsa_$ADDRESS ]; then
+    ssh-add ~/.ssh/id_rsa_$ADDRESS
+  fi
 fi
 
 berks vendor || exit $?
