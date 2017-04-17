@@ -11,6 +11,7 @@
     "recipe[screen]",
     "recipe[shell_aliases]",
     "recipe[ncdu]",
+    "recipe[fdupes]",
     "recipe[htop]",
     "recipe[ripgrep]",
     "recipe[vim]",
