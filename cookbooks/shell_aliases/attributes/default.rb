@@ -7,6 +7,7 @@ default[:shell_aliases] = {
     'https://github.com/pr0d1r2/common_shell_aliases.git:.',
     'https://github.com/pr0d1r2/media_shell_aliases.git:.',
     'https://github.com/pr0d1r2/linux_shell_aliases.git:.',
+    'https://github.com/pr0d1r2/torrent_shell_aliases.git:.',
     'https://github.com/pr0d1r2/gentoo_package_masking.git:shell_aliases.d'
   ]
 }
