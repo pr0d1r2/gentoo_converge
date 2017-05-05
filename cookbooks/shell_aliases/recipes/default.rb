@@ -17,4 +17,4 @@ execute 'cd /root/projects/shell_aliases_compiler && git checkout master'
 
 execute '/root/projects/shell_aliases_compiler/setup.sh'
 
-execute 'mv /root/.compiled_shell_aliases.sh /etc/profile.d/compiled_shell_aliases.sh'
+execute 'cp /root/.compiled_shell_aliases.sh /etc/profile.d/compiled_shell_aliases.sh'
