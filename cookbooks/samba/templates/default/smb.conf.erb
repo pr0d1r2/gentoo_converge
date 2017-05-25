@@ -1,0 +1,13 @@
+[global]
+   workgroup = <%= @workgroup %>
+   server string = <%= @server_string %>
+   hosts allow = <%= @hosts_allow.join(' ') %>
+
+<%- @shares.each do |share| %>
+[<%= share[:name] %>]
+   comment = <%= share[:comment] %>
+   path = <%= share[:path] %>
+   public = <%= share[:public] ? 'yes' : 'no' %>
+   writable = <%= share[:writable] ? 'yes' : 'no' %>
+   printable = <%= share[:printable] ? 'yes' : 'no' %>
+<%- end %>
