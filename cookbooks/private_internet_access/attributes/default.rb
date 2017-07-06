@@ -1,10 +1,10 @@
-default[:private_internet_access][:location] = 'Germany'
+default[:private_internet_access][:location] = 'Sweden'
 
 # We support connections on a variety of ports, TCP 80/443/110,
 # as well as a number of UDP ports: 53, 1194, 8080, 9201
 # 1194 UDP is default
-default[:private_internet_access][:port] = '1194'
-default[:private_internet_access][:proto] = 'UDP'
+default[:private_internet_access][:port] = '443'
+default[:private_internet_access][:proto] = 'tcp-client'
 
 default[:private_internet_access][:locations] = {
   'Australia' => 'aus',
