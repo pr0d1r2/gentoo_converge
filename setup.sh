@@ -30,7 +30,10 @@ run which chef-solo &>/dev/null || run emerge chefdk-omnibus || exit $?
 
 run touch /etc/portage/package.keywords/default || exit $?
 
-ssh-add -l | grep -q "$ADDRESS" || test -f "$HOME/.ssh/id_rsa_$ADDRESS" && ssh-add "$HOME/.ssh/id_rsa_$ADDRESS"
+if [ ! -e "/tmp/.gentoo-converge-identity-$ADDRESS" ]; then
+  ssh-add -l | grep -q "$ADDRESS" || test -f "$HOME/.ssh/id_rsa_$ADDRESS" && ssh-add "$HOME/.ssh/id_rsa_$ADDRESS"
+  touch "/tmp/.gentoo-converge-identity-$ADDRESS"
+fi
 
 berks vendor || exit $?
 knife solo cook "root@$ADDRESS" || exit  $?
