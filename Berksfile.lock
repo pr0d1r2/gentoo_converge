@@ -1,8 +1,8 @@
 DEPENDENCIES
   gentoo
-    git: https://github.com/aostanin/chef-gentoo
-    revision: 81b48aa88f51c8612afc6b027305c0ca057a5c18
-    ref: 81b48aa
+    git: https://github.com/pr0d1r2/chef-gentoo
+    revision: 82ba91d86910480659090326628863a0f67c1db0
+    ref: 82ba91d
   gentoo_kernel
     git: https://github.com/pr0d1r2/chef-gentoo_kernel.git
     revision: 04a74e9b7b04416a9ad5d1527b31912ee232f332
