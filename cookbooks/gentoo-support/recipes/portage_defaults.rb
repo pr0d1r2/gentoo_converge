@@ -1,5 +1,5 @@
-execute 'touch /etc/portage/package.use/default'
-execute 'touch /etc/portage/package.mask/default'
+system('touch /etc/portage/package.use/default')
+system('touch /etc/portage/package.mask/default')
 
 {
   'USE="bindist' => 'USE="-bindist',
