@@ -4,7 +4,7 @@ end
 
 execute 'echo -n > /root/.ssh/authorized_keys'
 
-[node[:authorized_keys]].flatten.compact.each do |authorized_key|
+[node[:ipaddress], node[:authorized_keys]].flatten.compact.each do |authorized_key|
   cookbook_file "/root/.ssh/#{authorized_key}.pub" do
     source "#{authorized_key}.pub"
     mode '0400'

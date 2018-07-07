@@ -35,10 +35,11 @@ if [ ! -e "/tmp/.gentoo-converge-identity-$ADDRESS" ]; then
   touch "/tmp/.gentoo-converge-identity-$ADDRESS"
 fi
 
+rsync -av "root@$ADDRESS:/root/.ssh/id_rsa.pub" "cookbooks/ssh-key/files/default/$ADDRESS.pub" || exit $?
+
 berks vendor || exit $?
 knife solo cook "root@$ADDRESS" || exit  $?
 
-rsync -av "root@$ADDRESS:/root/.ssh/id_rsa.pub" "cookbooks/ssh-key/files/default/$ADDRESS.pub" || exit $?
 cd cookbooks/ssh-key/files/default || exit $?
 git commit -a -m "Add key for $ADDRESS" || exit $?
 git push || exit $?
