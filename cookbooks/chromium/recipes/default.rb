@@ -1,5 +1,6 @@
 include_recipe 'gentoo-support::portage_defaults'
 include_recipe 'xorg-x11'
+include_recipe 'www-fonts'
 
 gentoo_package_use 'x11-libs/cairo' do
   use 'xcb X'
