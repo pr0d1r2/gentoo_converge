@@ -1,4 +1,4 @@
-name 'mplayer'
+name 'zoom-us'
 version '1.0.0'
-provides 'mplayer'
+provides 'zoom-us'
 depends 'xorg-x11'

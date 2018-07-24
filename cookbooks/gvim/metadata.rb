@@ -1,4 +1,4 @@
-name 'mplayer'
+name 'gvim'
 version '1.0.0'
-provides 'mplayer'
+provides 'gvim'
 depends 'xorg-x11'

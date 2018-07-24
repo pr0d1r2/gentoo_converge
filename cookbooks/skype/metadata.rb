@@ -1,4 +1,4 @@
-name 'mplayer'
+name 'skype'
 version '1.0.0'
-provides 'mplayer'
+provides 'skype'
 depends 'xorg-x11'

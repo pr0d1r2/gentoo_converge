@@ -1,4 +1,4 @@
-name 'mplayer'
+name 'spotify'
 version '1.0.0'
-provides 'mplayer'
+provides 'spotify'
 depends 'xorg-x11'

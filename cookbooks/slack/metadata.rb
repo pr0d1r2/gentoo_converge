@@ -1,4 +1,4 @@
-name 'mplayer'
+name 'slack'
 version '1.0.0'
-provides 'mplayer'
+provides 'slack'
 depends 'xorg-x11'

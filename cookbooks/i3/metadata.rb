@@ -1,0 +1,5 @@
+name 'i3'
+version '1.0.0'
+provides 'i3'
+depends 'gentoo-support'
+depends 'xorg-x11'
